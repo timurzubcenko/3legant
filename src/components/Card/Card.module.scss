@@ -1,0 +1,83 @@
+.arrivals_card {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    min-width: 262px;
+
+    .image {
+
+        position: relative;
+        margin-bottom: 12px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .new {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            color: #121212;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 8px 24px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: -0.03em;
+            text-align: center;
+            border-radius: 8px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s;
+        }
+    }
+
+    .starts {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        color: #343839;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 162%;
+        color: black;
+        margin: 10px 0;
+    }
+
+    .price {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 157%;
+        color: #121212;
+    }
+}
+
+.arrivals_card:hover {
+    .image {
+        .btn {
+            visibility: visible;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
